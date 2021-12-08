@@ -67,12 +67,12 @@ export default {
   },
   methods: {
     async sendEmail() {
-      console.log(process.env.VUE_APP_SMTP_FROM);
       console.log(await sendMail(
         `NEW EMAIL FROM ${this.companyName}`,
         `email body :
         ${this.emailBody}`
       )); 
+      this.emailBody = this.companyName = '';
     },
   },
 };
