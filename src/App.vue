@@ -3,7 +3,7 @@
     <navbar class="flex-none" />
     <router-view
         v-slot="{ Component }"
-        class="flex-grow pb-8"
+        class="flex-grow pb-8 w-4/6 mx-auto"
       >
         <transition name="fade" mode="out-in">
           <component

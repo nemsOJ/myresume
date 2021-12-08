@@ -5,7 +5,11 @@
       <p class="pl-12 text-xl">Étudiant en génie logiciel à l'École nationale des sciences appliquées de Tanger (ENSA tanger bac+5) à la recherche d'un stage de fin d'études de 4 à 6 mois.</p>
     </div>
     <div>
-      <div class="text-Ocean-Green uppercase font-semibold text-lg pb-1">education</div>
+      <div class="flex flex-row gap-1">
+        <i class="ri-ball-pen-fill text-lg text-Ocean-Green-light"></i>
+        <div class="text-Ocean-Green uppercase font-semibold text-lg pb-1">education</div>
+      </div>
+
       <div class="pl-12 flex flex-col gap-4">
         <div>
           <div class="font-medium">ENSAT, <span class="text-sm font-thin">Tangier-Morocco</span> — genie informatique</div>
@@ -25,7 +29,10 @@
       </div>
     </div>
     <div>
-      <div class="text-Ocean-Green uppercase font-semibold text-lg pb-1">Skills</div>
+      <div class="flex flex-row gap-1">
+        <i class="ri-star-smile-fill text-lg text-Ocean-Green-light"></i>
+        <div class="text-Ocean-Green uppercase font-semibold text-lg pb-1">Skills</div>
+      </div>
       <div class="pl-12 flex flex-col gap-4">
         <div>
           <div class="capitalize text-Illuminating-Emerald">programming languages</div>
