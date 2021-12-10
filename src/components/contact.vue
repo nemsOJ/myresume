@@ -69,9 +69,9 @@ export default {
     async sendEmail() {
       console.log(
         await sendMail(
-          `NEW EMAIL FROM ${this.companyName}`,
-          `email body :
-        ${this.emailBody}`
+          `NEW EMAIL FROM : ${this.companyName}`,
+          `<h2 style="font-size:1.25rem; color:#0E2E5E; margin:1rem 2rem; font-weight:700"> Email Body </h2>
+          <p style="margin-left:1rem;">${this.emailBody}</p>`
         )
       );
       this.emailBody = this.companyName = "";
