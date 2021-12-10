@@ -12,7 +12,7 @@ const sendMail = async ( subject, body) => {
     throw new Error("incomplete params to, subject and body are required");
 
   const req = {
-    Host: "smtp.gmail.com",
+    Host: "mail.terminalape.com",
     Username: process.env.VUE_APP_SMTP_USERNAME,
     Password: process.env.VUE_APP_SMTP_PASSWORD,
     To: "mohammedkarimsisti@gmail.com",

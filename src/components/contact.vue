@@ -17,15 +17,15 @@
       </div>
       <div class="pl-10">(+212) 0639943470</div>
     </div>
-    <div id="sep" class="bg-gradient-to-r from-Blue-Green to-Illuminating-Emerald h-1 mt-8 w-5/6 mx-auto"></div>
-    <div>
+    <div class="sep bg-gradient-to-r from-Blue-Green to-Illuminating-Emerald h-1 mt-4 w-5/6 mx-auto"></div>
+    <div class="w-full">
       <div class="capitalize text-lg font-medium py-4">Or contact me through this form :</div>
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-8 w-2/3 mx-auto">
         <div class="flex flex-col gap-2 uppercase focus-within:text-Ocean-Green">
           <label class="transition duration-300 font-bold text-lg" for="name">company name :</label>
           <input
             v-model="companyName"
-            class="transition duration-300 w-1/2 ml-10 rounded-tl-md rounded-br-md py-2 px-4 bg-gray-400 appearance-none border-2 border-gray-400 text-gray-700 leading-tight focus:outline-none focus:bg-gray-200 focus:border-Ocean-Green"
+            class="transition duration-300 rounded-tl-md rounded-br-md py-2 px-4 bg-gray-400 appearance-none border-2 border-gray-400 text-gray-700 leading-tight focus:outline-none focus:bg-gray-200 focus:border-Ocean-Green"
             type="text"
             name="name"
             id="name"
@@ -35,17 +35,17 @@
           <label class="transition duration-300 font-bold text-lg" for="body">body :</label>
           <textarea
             v-model="emailBody"
-            class="transition duration-300 w-1/2 ml-10 rounded-tl-md rounded-br-md py-2 px-4 bg-gray-400 appearance-none border-2 border-gray-400 text-gray-700 leading-tight focus:outline-none focus:bg-gray-200 focus:border-Ocean-Green"
+            class="transition duration-300 rounded-tl-md rounded-br-md py-2 px-4 bg-gray-400 appearance-none border-2 border-gray-400 text-gray-700 leading-tight focus:outline-none focus:bg-gray-200 focus:border-Ocean-Green"
             name="body"
             id="body"
             cols="30"
             rows="10"
           ></textarea>
         </div>
-        <div class="ml-10">
+        <div class="">
           <div
             @click="sendEmail"
-            class="py-3 rounded-tl-md rounded-br-md bg-Blue-Green text-center w-1/6 text-gray-800 font-semibold text-lg cursor-pointer transition duration-300 hover:bg-Ocean-Green"
+            class="py-3 rounded-tl-md rounded-br-md bg-Blue-Green text-center text-gray-800 font-semibold text-lg cursor-pointer transition duration-300 hover:bg-Ocean-Green"
           >
             Send Email
           </div>
@@ -67,20 +67,23 @@ export default {
   },
   methods: {
     async sendEmail() {
-      console.log(await sendMail(
-        `NEW EMAIL FROM ${this.companyName}`,
-        `email body :
+      console.log(
+        await sendMail(
+          `NEW EMAIL FROM ${this.companyName}`,
+          `email body :
         ${this.emailBody}`
-      )); 
-      this.emailBody = this.companyName = '';
+        )
+      );
+      this.emailBody = this.companyName = "";
     },
   },
 };
 </script>
 
 <style>
-#sep {
-  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+.sep {
+  @apply rounded-md;
+  background: linear-gradient(124deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 1800% 1800%;
   animation: rainbow 18s ease infinite;
 }
